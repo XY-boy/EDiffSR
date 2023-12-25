@@ -1,0 +1,186 @@
+name: ir-sde-orginal
+suffix: ~  # add suffix to saved images
+model: denoising
+distortion: sr
+gpu_ids: [0]
+
+sde:
+  max_sigma: 30
+  T: 100
+  schedule: cosine # linear, cosine
+  eps: 0.005
+  
+degradation:
+  # for denoising
+  sigma: 25
+  noise_type: G # Gaussian noise: G
+
+  # for super-resolution
+  scale: 4
+
+#### network structures
+network_G:
+  which_model_G: ConditionalUNet
+  setting:
+    in_nc: 3
+    out_nc: 3
+    nf: 64
+    depth: 4
+
+#### path
+path:
+  pretrain_model_G: /home/amax/Desktop/16T/disk4/XY-Space/SISR/image-restoration-sde-main/codes/config/sisr/log/ir-sde-original/models/645000_G.pth
+  
+datasets:
+  test1:
+    name: Airport
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Airport
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Airport
+  test2:
+    name: BareLand
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/BareLand
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/BareLand
+  test3:
+    name: BaseballField
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/BaseballField
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/BaseballField
+  test4:
+    name: Beach
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Beach
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Beach
+  test5:
+    name: Bridge
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Bridge
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Bridge
+  test6:
+    name: Center
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Center
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Center
+  test7:
+    name: Church
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Church
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Church
+  test8:
+    name: Commercial
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Commercial
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Commercial
+  test9:
+    name: DenseResidential
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/DenseResidential
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/DenseResidential
+  test10:
+    name: Desert
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Desert
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Desert
+  test11:
+    name: Farmland
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Farmland
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Farmland
+  test12:
+    name: Forest
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Forest
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Forest
+  test13:
+    name: Industrial
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Industrial
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Industrial
+  test14:
+    name: Meadow
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Meadow
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Meadow
+  test15:
+    name: MediumResidential
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/MediumResidential
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/MediumResidential
+  test16:
+    name: Mountain
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Mountain
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Mountain
+  test17:
+    name: Park
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Park
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Park
+  test18:
+    name: Parking
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Parking
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Parking
+  test19:
+    name: Playground
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Playground
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Playground
+  test20:
+    name: Pond
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Pond
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Pond
+  test21:
+    name: Port
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Port
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Port
+  test22:
+    name: RailwayStation
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/RailwayStation
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/RailwayStation
+  test23:
+    name: Resort
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Resort
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Resort
+  test24:
+    name: River
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/River
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/River
+  test25:
+    name: School
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/School
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/School
+  test26:
+    name: SparseResidential
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/SparseResidential
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/SparseResidential
+  test27:
+    name: Square
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Square
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Square
+  test28:
+    name: Stadium
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Stadium
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Stadium
+  test29:
+    name: StorageTanks
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/StorageTanks
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/StorageTanks
+  test30:
+    name: Viaduct
+    mode: LQGT
+    dataroot_GT: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/GT/Viaduct
+    dataroot_LQ: /home/amax/Desktop/16T/disk4/XY-Space/SISR/Dataset/test/AID900/LR/Viaduct
+
+
