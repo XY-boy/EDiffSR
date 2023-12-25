@@ -28,6 +28,11 @@ python train.py -opt=options/train/setting.yml
 ```
 python test.py -opt=options/test/aid.yml
 ```
+
+## Contact
+If you have any questions or suggestions, feel free to contact me. 😊  
+Email: xiao_yi@whu.edu.cn; xy574475@gmail.com
+
 ## Citation
 If you find our work helpful in your research, kindly consider citing it. We appreciate your support！😊
 
