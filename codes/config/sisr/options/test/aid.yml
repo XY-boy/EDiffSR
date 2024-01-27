@@ -1,4 +1,4 @@
-name: refusion-ori-DOTA-DIOR-iter180000
+name: aid-30-iter180000
 suffix: ~  # add suffix to saved images
 model: denoising
 distortion: sr
