@@ -25,7 +25,7 @@ python train.py -opt=options/train/setting.yml
 
 ### Test
 ```
-python test.py -opt=options/test/aid.yml
+python test.py -opt=options/test/nwpu.yml
 ```
 
 ## Contact
