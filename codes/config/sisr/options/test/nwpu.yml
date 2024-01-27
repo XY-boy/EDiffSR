@@ -1,4 +1,4 @@
-name: refusion-ori-NWPU-iter180000
+name: NWPU-iter180000
 suffix: ~  # add suffix to saved images
 model: denoising
 distortion: sr
@@ -20,7 +20,7 @@ degradation:
 
 #### path
 path:
-  pretrain_model_G: /mnt/disk3/XY-SPACE/SISR/image-restoration-sde-main/experiments/sisr/refusion_ori/models/180000_G.pth
+  pretrain_model_G: /experiments/sisr/ediffsr/180000_G.pth
   
 datasets:
   test1:
