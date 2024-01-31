@@ -20,7 +20,7 @@ degradation:
 
 #### path
 path:
-  pretrain_model_G: /mnt/disk3/XY-SPACE/SISR/image-restoration-sde-main/experiments/sisr/refusion-w-prior-enhance/models/300000_G.pth
+  pretrain_model_G: /experiments/180000_G.pth
   
 datasets:
   test1:
@@ -179,8 +179,8 @@ network_G:
   which_model_G: ConditionalNAFNet
   setting:
     width: 64
-    enc_blk_nums: [8, 1, 1, 1]
+    enc_blk_nums: [14, 1, 1, 1]
     middle_blk_num: 1
-    dec_blk_nums: [1, 1, 1, 8]
+    dec_blk_nums: [1, 1, 1, 1]
 
 
