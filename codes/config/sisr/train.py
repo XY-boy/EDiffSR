@@ -239,10 +239,10 @@ def main():
 
             LQ, GT = train_data["LQ"], train_data["GT"]  #  b 3 32 32; b 3 128 128
 
-            LQ = util.upscale(LQ, scale)  #  这里可以改，改成一个由x1的SR的模块先处理， 现在是bicubic上采样
+            LQ = util.upscale(LQ, scale)  #  bicubic, which can be repleced by deep networks
 
-            # 用SDE规则随机生成四个时间点timestep，以及这四个点对应的状态图state （也就是加了噪声的图）
-            timesteps, states = sde.generate_random_states(x0=GT, mu=LQ)  # 时间点=batchsize，states [b 3 128 128]
+            # random timestep and state (noisy map) via SDE
+            timesteps, states = sde.generate_random_states(x0=GT, mu=LQ)  # t=batchsize，states [b 3 128 128]
 
             model.feed_data(states, LQ, GT)  # xt, mu, x0, 将加了噪声的LR图xt，LR以及GT输入改进的UNet进行去噪
 
