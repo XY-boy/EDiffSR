@@ -26,6 +26,11 @@ python train.py -opt=options/train/setting.yml
 python test.py -opt=options/test/nwpu.yml
 ```
 
+## Acknowledgments
+Our EDiffSR mainly borrows from the SDE process of [IRSDE](https://github.com/Algolzw/image-restoration-sde) and NAFNet (https://github.com/megvii-research/NAFNet).  
+Thanks for these excellent open-source works!
+
+
 ## Contact
 If you have any questions or suggestions, feel free to contact me. 😊  
 Email: xiao_yi@whu.edu.cn; xy574475@gmail.com
