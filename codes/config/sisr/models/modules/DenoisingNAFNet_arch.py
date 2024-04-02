@@ -211,6 +211,10 @@ class ResidualGroup(nn.Module):
 # ---------------------------------------- -----------------------------------------------------------------------
 
 class ConditionalNAFNet(nn.Module):
+    """NAFNet with multi-scale structure and prior enhancement
+    Tips:
+        NAFNet (https://github.com/megvii-research/NAFNet)
+    """
 
     def __init__(self, img_channel=3, width=16, middle_blk_num=1, enc_blk_nums=[], dec_blk_nums=[], upscale=1):
         super().__init__()
