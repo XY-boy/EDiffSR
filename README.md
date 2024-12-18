@@ -11,7 +11,7 @@ PyTorch codes for "[EDiffSR: An Efficient Diffusion Probabilistic Model for Remo
 **Step I.** Please download the following remote sensing benchmarks:
 | Data Type | [AID](https://captain-whu.github.io/AID/) | [DOTA-v1.0](https://captain-whu.github.io/DOTA/dataset.html) | [DIOR](https://www.sciencedirect.com/science/article/pii/S0924271619302825) | [NWPU-RESISC45](https://ieeexplore.ieee.org/abstract/document/7891544)
 | :----: | :-----: | :----: | :----: | :----: |
-|Training | [Download](https://onedrive.live.com/?authkey=%21AAqO0B6SeejPkr0&id=42EC9A19F3DE58D8%2176404&cid=42EC9A19F3DE58D8&parId=root&parQt=sharedby&o=OneUp) | None | None | None |
+|Training | [Download](https://captain-whu.github.io/AID/) | None | None | None |
 |Testing | [Download](https://captain-whu.github.io/AID/) | [Download](https://captain-whu.github.io/DOTA/dataset.html) | [Download](https://drive.google.com/drive/folders/1UdlgHk49iu6WpcJ5467iT-UqNPpx__CC) | [Download](https://onedrive.live.com/?authkey=%21AHHNaHIlzp%5FIXjs&id=5C5E061130630A68%21107&cid=5C5E061130630A68&parId=root&parQt=sharedby&o=OneUp)
 
 **Step II.** Modify the path in `options/train/setting.yml` and `options/test/aid.yml`
