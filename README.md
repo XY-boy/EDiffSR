@@ -29,7 +29,7 @@ python test.py -opt=options/test/nwpu.yml
 ```
 
 ## Acknowledgments
-Our EDiffSR mainly borrows from the SDE process of [IRSDE](https://github.com/Algolzw/image-restoration-sde) and NAFNet (https://github.com/megvii-research/NAFNet).  
+Our EDiffSR mainly borrows from the SDE process of [IRSDE](https://github.com/Algolzw/image-restoration-sde) and [NAFNet](https://github.com/megvii-research/NAFNet).  
 Thanks for these excellent open-source works!
 
 
