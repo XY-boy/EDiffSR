@@ -29,8 +29,7 @@ python test.py -opt=options/test/nwpu.yml
 ```
 
 ## Acknowledgments
-Our EDiffSR mainly borrows from the SDE process of [IRSDE](https://github.com/Algolzw/image-restoration-sde) and [NAFNet](https://github.com/megvii-research/NAFNet).  
-Thanks for these excellent open-source works!
+Our EDiffSR mainly borrows from the SDE process of [IRSDE](https://github.com/Algolzw/image-restoration-sde) and [NAFNet](https://github.com/megvii-research/NAFNet). Thanks for these excellent open-source works!
 
 
 ## Contact
@@ -38,7 +37,7 @@ If you have any questions or suggestions, feel free to contact me. 😊
 Email: xiao_yi@whu.edu.cn; xy574475@gmail.com
 
 ## Citation
-If you find our work helpful in your research, kindly consider citing it. We appreciate your support！😊
+If our work contributes to your research, we would greatly appreciate your citation. Thank you for your support! 😊
 
 ```
 @ARTICLE{xiao2024ediffsr,
